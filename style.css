@@ -6,6 +6,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
 }
 
 .container {
@@ -14,14 +20,25 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .container {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
     color: #333;
     margin-bottom: 30px;
+    transition: color 0.3s ease;
 }
 
-#generator-btn {
+body.dark-mode h1 {
+    color: #f0f0f0;
+}
+
+#generator-btn, #theme-toggle {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -36,8 +53,18 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#generator-btn:hover {
+#generator-btn:hover, #theme-toggle:hover {
     background-color: #45a049;
+}
+
+body.dark-mode #generator-btn,
+body.dark-mode #theme-toggle {
+    background-color: #6a0dad; /* Dark mode button color */
+}
+
+body.dark-mode #generator-btn:hover,
+body.dark-mode #theme-toggle:hover {
+    background-color: #7b29d4;
 }
 
 #numbers-display {
@@ -47,6 +74,11 @@ h1 {
     display: flex;
     gap: 10px;
     justify-content: center;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #numbers-display {
+    color: #e0e0e0;
 }
 
 .number-circle {
@@ -59,4 +91,11 @@ h1 {
     align-items: center;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .number-circle {
+    background-color: #555;
+    color: #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
