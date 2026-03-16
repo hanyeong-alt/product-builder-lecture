@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Inquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container contact-container">
+        <h1>Affiliate Inquiry</h1>
+        <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" id="affiliate-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="company">Company (Optional):</label>
+            <input type="text" id="company" name="company">
+
+            <label for="inquiry">Your Inquiry:</label>
+            <textarea id="inquiry" name="inquiry" rows="5" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Inquiry</button>
+        </form>
+        <p id="form-status"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
