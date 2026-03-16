@@ -32,10 +32,12 @@ generatorBtn.addEventListener('click', () => {
 
     const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
 
-    sortedNumbers.forEach(number => {
-        const circle = document.createElement('div');
-        circle.classList.add('number-circle');
-        circle.textContent = number;
-        numbersDisplay.appendChild(circle);
+    sortedNumbers.forEach((number, index) => {
+        setTimeout(() => {
+            const circle = document.createElement('div');
+            circle.classList.add('number-circle');
+            circle.textContent = number;
+            numbersDisplay.appendChild(circle);
+        }, index * 300); // 300ms delay for each number
     });
 });
