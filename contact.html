@@ -3,29 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affiliate Inquiry</title>
+    <title>Contact Us - Lotto Generator</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
 </head>
 <body>
-    <div class="container contact-container">
-        <h1>Affiliate Inquiry</h1>
-        <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" id="affiliate-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="company">Company (Optional):</label>
-            <input type="text" id="company" name="company">
-
-            <label for="inquiry">Your Inquiry:</label>
-            <textarea id="inquiry" name="inquiry" rows="5" required></textarea>
-
-            <button type="submit" class="submit-btn">Send Inquiry</button>
+    <div class="container">
+        <h1>Partnership Inquiry</h1>
+        <form action="https://formspree.io/f/xyzkpvrl" method="POST" class="contact-form">
+            <div>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+            <div>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Enter your inquiry here..."></textarea>
+            </div>
+            <button type="submit">Send Inquiry</button>
         </form>
-        <p id="form-status"></p>
+        <a href="index.html" class="back-link">← Back to Generator</a>
     </div>
-    <script src="main.js"></script>
 </body>
 </html>
